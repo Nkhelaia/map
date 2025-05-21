@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <style>
     body { margin: 0; font-family: sans-serif; }
-    #map { height: 80vh; width: 100vw; }
+    #map { height: 700px; width: 100%;z-index: -1; }
     #search {
       padding: 10px;
       background: #fff;
@@ -38,6 +38,9 @@
       text-align: center;
       background-color: #f8f8f8;
       font-size: 1em;
+    }
+    ul{
+      z-index: 9999 !important;
     }
     @media (max-width: 600px) {
       #search {
@@ -106,7 +109,7 @@
             L.latLng(endCoords[0], endCoords[1])
           ],
           routeWhileDragging: false,
-          language: 'ka',
+          language: 'en',
           show: false,
           addWaypoints: false,
           router: new L.Routing.OSRMv1({
